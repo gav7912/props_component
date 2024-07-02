@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 元件章節</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app" class="container mt-5">
+    <div class="row" id="content">
+      <card v-for="(item, index) in paginatedContent" :key="index" :url="item.Picture1" :name="item.Name" :opentime="item.Opentime" :address="item.Add" :tel="item.Tel"></card>
+    </div>
+    <div class="d-flex justify-content-center">
+      <pagination :total-pages="totalPages" :current-page="currentPage" @page-changed="handlePageChange"></pagination>
+    </div>
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.prod.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
